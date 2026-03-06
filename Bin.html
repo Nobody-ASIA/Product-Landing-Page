@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechVault - Your Ultimate Multimedia Store</title>
+    <link rel="stylesheet" href="YES.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-gamepad"></i>
+                    <span>TechVault</span>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="#products" class="nav-link">Products</a></li>
+                        <li><button class="nav-link about-btn" style="background: none; border: none; cursor: pointer; color: inherit; font-weight: 600; font-size: 0.95rem;">About</button></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Level Up Your Gaming Experience</h1>
+            <p class="hero-subtitle">Discover the latest in gaming, tech, and multimedia accessories. From powerful gaming PCs to the newest handhelds - we've got it all!</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Shop Now</button>
+                <button class="btn btn-secondary">Explore Products</button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <h3>500+</h3>
+                <p>Products</p>
+            </div>
+            <div class="stat-item">
+                <h3>10K+</h3>
+                <p>Customers</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <p>Check out our hottest deals and newest arrivals</p>
+                <div class="search-container">
+                    <input type="text" class="search-bar" id="searchBar" placeholder="Search products...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real reviews from real gamers</p>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Amazing service! Got my gaming PC delivered in 2 days. The performance is incredible and the price was unbeatable. Highly recommend TechVault!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Marco Reyes</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Best place to buy gaming peripherals! The mechanical keyboard I bought is fantastic. Customer support was very helpful in choosing the right switches."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Chen</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Finally found a reliable store for my Mac products. Great prices and authentic products. The staff really knows their tech!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>James Santos</h4>
+                            <p>Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-gamepad"></i>
+                        <span>TechVault</span>
+                    </div>
+                    <p class="footer-desc">Your trusted destination for gaming, multimedia, and tech accessories. Level up your setup with us!</p>
+                    <div class="social-links">
+                        <a href="https://github.com/Nobody-ASIA" target="_blank" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/gio-saldua-768b973ab/" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping Information</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:giosaldua2@gmail.com">giosaldua2@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+63 960 408 5077</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Narvacan, Ilocos Sur, Philippines</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechVault. All rights reserved. | Designed by Gio Saldua</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- About Modal -->
+    <div class="modal" id="aboutModal">
+        <div class="modal-content">
+            <button class="modal-close" id="aboutClose">&times;</button>
+            <div class="about-container">
+                <div class="about-header">
+                    <h2>About TechVault</h2>
+                </div>
+                <div class="about-body">
+                    <div class="about-section">
+                        <h3>About the Store</h3>
+                        <p>TechVault is your ultimate destination for gaming, multimedia, and tech accessories. We specialize in providing the latest gaming consoles, powerful PCs, professional peripherals, and Mac products at competitive prices.</p>
+                    </div>
+
+                    <div class="about-section">
+                        <h3>About the Owner</h3>
+                        <div class="owner-info">
+                            <h4>Saldua, Gio Brix R.</h4>
+                            <p><strong>Field:</strong> Network and Security</p>
+                            <p><strong>Location:</strong> Narvacan, Ilocos Sur, Philippines</p>
+                        </div>
+                    </div>
+
+                    <div class="about-section">
+                        <h3>Education</h3>
+                        <ul class="education-list">
+                            <li>University of the Cordilleras</li>
+                            <li>Narvacan Catholic School (NCS) Inc.</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-section">
+                        <h3>Connect With Us</h3>
+                        <div class="about-social">
+                            <a href="https://www.linkedin.com/in/gio-saldua-768b973ab/" target="_blank" class="social-link-about">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/Nobody-ASIA" target="_blank" class="social-link-about">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="about-section">
+                        <h3>Contact Information</h3>
+                        <p><strong>Email:</strong> <a href="mailto:giosaldua2@gmail.com">giosaldua2@gmail.com</a></p>
+                        <p><strong>Phone:</strong> +63 960 408 5077</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content cart-modal">
+            <button class="modal-close" id="cartClose">&times;</button>
+            <h2>Shopping Cart</h2>
+            <div class="cart-items-container" id="cartItemsContainer">
+                <p class="empty-cart">Your cart is empty. Start shopping!</p>
+            </div>
+            <div class="cart-total" id="cartTotal" style="display: none;">
+                <h3>Total: <span id="totalPrice">₱0</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content product-modal">
+            <button class="modal-close" id="productClose">&times;</button>
+            <div class="product-details" id="productDetails">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // ============== PRODUCT DATA WITH REAL COMMENTS ==============
+        const products = [
+            { id: 1, name: 'Gaming Laptop RTX 4060', price: 65999, rating: 4.5, badge: 'New', icon: 'fas fa-laptop', reviews: 128, comments: ['Very impressed with this laptop! Got it yesterday and the performance is smooth even on heavy games. Delivery was super fast too.', 'Battery life is amazing, easily lasts 8 hours. Runs Cyberpunk 2077 at high settings without much lag. Best purchase ever!'] },
+            { id: 2, name: 'Custom Gaming PC i7 Build', price: 89999, oldPrice: 99999, rating: 5.0, badge: 'Sale', icon: 'fas fa-desktop', reviews: 256, comments: ['This PC is an absolute beast! I can stream and play 4K games simultaneously without any issues. Worth every peso.', 'Amazing temperature management and the build quality is premium. Customer service was helpful too when I had questions.'] },
+            { id: 3, name: 'Wireless Gaming Headset Pro', price: 4299, rating: 4.0, icon: 'fas fa-headphones', reviews: 89, comments: ['Sound quality is incredible and the noise cancellation works great. Perfect for competitive gaming and calls.', 'Super comfortable to wear for long gaming sessions. Battery lasts 2+ days on a single charge. Highly recommended!'] },
+            { id: 4, name: 'Mechanical RGB Keyboard', price: 3599, rating: 4.6, badge: 'Hot', icon: 'fas fa-keyboard', reviews: 145, comments: ['Love the cherry switches! They feel premium and have a satisfying click. RGB is customizable and looks sick.', 'Wrist rest is very comfortable and the build feels solid. No regrets buying this. Great value for money.'] },
+            { id: 5, name: 'Gaming Mouse 16000 DPI', price: 2199, rating: 4.8, icon: 'fas fa-mouse', reviews: 203, comments: ['Aiming in FPS games is so much better now. The tracking is pixel-perfect and no jitters. Best mouse upgrade ever!', 'Lighter than expected and fits perfectly in my hand. Buttons are responsive and reliable. Worth the price.'] },
+            { id: 6, name: 'Nintendo Switch OLED', price: 18999, rating: 4.9, badge: 'New', icon: 'fas fa-gamepad', reviews: 312, comments: ['The OLED screen is absolutely gorgeous! Colors are vibrant and the brightness is perfect. Games look amazing.', 'Portable gaming at its finest. Battery life is solid and the controllers are snappy. Family loves it!'] },
+            { id: 7, name: 'PlayStation 5 Console', price: 29999, oldPrice: 32999, rating: 5.0, badge: 'Sale', icon: 'fab fa-playstation', reviews: 445, comments: ['Finally got my PS5! Load times are insanely fast with the SSD. Demon\'s Souls looks breathtaking on this machine.', 'DualSense controller haptics are mind-blowing. Game library is phenomenal. Best console gaming experience!'] },
+            { id: 8, name: 'Xbox Series X', price: 28999, rating: 4.7, icon: 'fab fa-xbox', reviews: 334, comments: ['Game Pass is a steal with this console. Performance in 4K is outstanding and the controller feels great.', 'Backward compatibility is awesome, can play older games too. Fast loading times make gaming super convenient.'] },
+            { id: 9, name: '4K Gaming Monitor 144Hz', price: 24999, rating: 4.9, icon: 'fas fa-tv', reviews: 156, comments: ['This monitor is a game-changer! Crystal clear 4K resolution and the 144Hz refresh rate is buttery smooth.', 'Color accuracy is professional-grade. Response time is instant. Perfect for both gaming and design work.'] },
+            { id: 10, name: 'MacBook Pro M3', price: 89999, rating: 5.0, badge: 'Hot', icon: 'fab fa-apple', reviews: 267, comments: ['Processing power is unreal! Can edit 4K videos without any lag. Best investment for creative professionals.', 'Build quality is exceptional and battery life is incredible. Worth every peso for the performance.'] },
+            { id: 11, name: 'AMD Ryzen 9 7950X Processor', price: 32999, rating: 4.6, icon: 'fas fa-microchip', reviews: 98, comments: ['Performance is insane for streaming and gaming simultaneously. Temperatures stay cool with good cooling.', 'Massive upgrade from my old CPU. Rendering videos is now lightning fast. Great value processor.'] },
+            { id: 12, name: 'RTX 4090 Graphics Card', price: 95999, rating: 5.0, badge: 'New', icon: 'fas fa-memory', reviews: 178, comments: ['Absolute monster of a GPU! Runs any game at max settings with 144+ FPS. DLSS 3 is incredible.', 'Overkill for 1440p gaming but future-proof. Keeps cool and quiet even under heavy load.'] },
+            { id: 13, name: 'Razer DeathAdder V3 Mouse', price: 3999, rating: 4.8, icon: 'fas fa-mouse-pointer', reviews: 267, comments: ['Weight is perfect at only 63g. Wireless latency is non-existent. Best for esports titles!', 'Ergonomics are spot on and durability is proven. Have been using it for 6 months, still like new.'] },
+            { id: 14, name: 'SteelSeries Arctis Pro Headset', price: 5499, rating: 4.7, icon: 'fas fa-headphones-alt', reviews: 189, comments: ['Sound is crystal clear for gaming and music. Mic quality is broadcast-ready. Incredibly comfortable for long sessions.', 'Build quality is premium and materials feel durable. Noise cancellation works wonders.'] },
+            { id: 15, name: 'ASUS ROG Gaming Chair', price: 12999, rating: 4.8, icon: 'fas fa-chair', reviews: 124, comments: ['Lumbar support is amazing! I can sit for 10+ hours without any back pain. Worth the price tag.', 'Very comfortable and adjustable in every way. Feels like a premium office chair but better.'] },
+            { id: 16, name: 'Corsair K95 Platinum Keyboard', price: 6999, rating: 4.9, icon: 'fas fa-keyboard', reviews: 201, comments: ['Premium mechanical keyboard at a fair price. RGB is customizable and macro keys are useful.', 'Build quality is rock solid and keys feel smooth. Best keyboard I\'ve owned so far.'] },
+            { id: 17, name: 'LG 27" 4K IPS Monitor', price: 16999, rating: 4.8, icon: 'fas fa-tv', reviews: 143, comments: ['Color accuracy is perfect for photo/video editing. IPS panel gives wide viewing angles. No dead pixels.', 'Great for productivity with 4K resolution. Comes with good stand and mounting options.'] },
+            { id: 18, name: 'Samsung 1TB SSD (NVMe)', price: 8999, rating: 4.9, icon: 'fas fa-hdd', reviews: 298, comments: ['Read/write speeds are incredibly fast! Boot times are less than 10 seconds. Very reliable drive.', 'Easy to install and setup. Performance is consistent even after heavy use. Great value.'] },
+            { id: 19, name: 'Logitech G Hub Mouse Pad', price: 1299, rating: 4.6, icon: 'fas fa-square', reviews: 156, comments: ['Large surface area is perfect for low sensitivity players. Material is smooth and durable.', 'Non-slip base keeps it in place during intense gaming. Edges don\'t curl even after months of use.'] },
+            { id: 20, name: 'Alienware 34" Ultrawide Monitor', price: 34999, rating: 5.0, badge: 'New', icon: 'fas fa-tv', reviews: 95, comments: ['Ultrawide is a game-changer for immersion! Curved panel wraps around your view perfectly.', 'Extreme refresh rate at 144Hz makes games incredibly smooth. Panels are color-accurate too.'] },
+            { id: 21, name: 'NVIDIA RTX 4070 Super', price: 48999, rating: 4.8, icon: 'fas fa-memory', reviews: 187, comments: ['Great 1440p gaming card at a reasonable price. Handles ray tracing and DLSS beautifully.', 'Quiet cooling system and efficient power usage. Solid upgrade from the 3070.'] },
+            { id: 22, name: 'Intel Core i9-13900KS', price: 42999, rating: 4.9, icon: 'fas fa-microchip', reviews: 156, comments: ['Absolute powerhouse for gaming and productivity. Overclocking potential is amazing.', 'Temperatures are great with proper cooling solution. Best Intel processor right now.'] },
+            { id: 23, name: 'Corsair DDR5 64GB RAM', price: 18999, rating: 4.7, icon: 'fas fa-memory', reviews: 112, comments: ['Fast speeds and built like a tank. DDR5 is the future and this delivery is rock solid.', 'RGB lights look amazing and performance is consistent under stress tests.'] },
+            { id: 24, name: 'Samsung Odyssey G7 Monitor', price: 19999, rating: 4.9, icon: 'fas fa-tv', reviews: 203, comments: ['240Hz refresh rate at 1440p is buttery smooth! Curved design adds to immersion.', 'G-Sync support eliminates tearing. Response time is blazingly fast.'] },
+            { id: 25, name: 'HyperX Cloud Stinger 2', price: 3299, rating: 4.5, icon: 'fas fa-headphones', reviews: 178, comments: ['Great gaming headset for the price! Mic quality is decent and comfort is good.', 'Works across multiple platforms seamlessly. Good durability for budget option.'] },
+            { id: 26, name: 'Logitech G Pro X Superlight', price: 5999, rating: 4.9, icon: 'fas fa-mouse-pointer', reviews: 234, comments: ['Weighs only 63g but feels premium. Wireless latency is undetectable. Pro esports players love this.', 'Reliable build and snappy clicks. Best lightweight gaming mouse!'] },
+            { id: 27, name: 'Vertical Ergonomic Mouse', price: 2899, rating: 4.4, icon: 'fas fa-mouse', reviews: 145, comments: ['Wrist pain is gone! Vertical design is very comfortable for long work sessions.', 'Productivity mouse that actually feels good. Lesser gaming performance but great for work.'] },
+            { id: 28, name: 'USB-C Docking Station (12-in-1)', price: 4999, rating: 4.6, icon: 'fas fa-tv', reviews: 167, comments: ['Game changer for laptop users! Finally a dock that supports everything I need.', 'Plug and play installation. Fast data transfer speeds across all ports.'] },
+            { id: 29, name: 'Wireless Charging Pad Pro', price: 1899, rating: 4.7, icon: 'fas fa-plug', reviews: 198, comments: ['Charges my phone and earbuds at the same time! Works great with thick cases.', 'Sleek design and reliable charging every time.'] },
+            { id: 30, name: 'RGB LED Light Strip (10m)', price: 1599, rating: 4.5, icon: 'fas fa-lightbulb', reviews: 212, comments: ['Setup is super easy! RGB colors are vibrant and smooth during transitions.', 'Great for desk setup ambiance. Adhesive holds well and is removable.'] },
+            { id: 31, name: 'Mechanical Numpad RGB', price: 2199, rating: 4.6, icon: 'fas fa-calculator', reviews: 89, comments: ['Perfect for spreadsheet work and accounting. Quality switches feel great!', 'Compact size is perfect for desk organization while being fully functional.'] },
+            { id: 32, name: 'Clip-on Ring Light', price: 1299, rating: 4.8, icon: 'fas fa-lightbulb', reviews: 245, comments: ['Perfect for video calls and streaming! Brightness levels are adjustable and lighting is even.', 'Clips securely to monitor and looks professional. Great value!'] }
+        ];
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        let orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+        // ============== DOM ELEMENTS ==============
+        const productGrid = document.getElementById('productGrid');
+        const searchBar = document.getElementById('searchBar');
+        const cartBtn = document.getElementById('cartBtn');
+        const cartModal = document.getElementById('cartModal');
+        const aboutBtn = document.querySelector('.about-btn');
+        const aboutModal = document.getElementById('aboutModal');
+        const productModal = document.getElementById('productModal');
+        const themeToggle = document.getElementById('themeToggle');
+        const cartClose = document.getElementById('cartClose');
+        const aboutClose = document.getElementById('aboutClose');
+        const productClose = document.getElementById('productClose');
+        const backToTop = document.getElementById('backToTop');
+        const cartCount = document.querySelector('.cart-count');
+
+        // ============== RENDER PRODUCTS ==============
+        function renderProducts(productsToShow = products) {
+            productGrid.innerHTML = '';
+            productsToShow.forEach(product => {
+                const stars = '★'.repeat(Math.floor(product.rating)) + (product.rating % 1 ? '½' : '');
+                const oldPriceHTML = product.oldPrice ? ` <span class="old-price">₱${product.oldPrice.toLocaleString()}</span>` : '';
+                const badgeHTML = product.badge ? `<div class="product-badge ${product.badge === 'Sale' ? 'sale' : ''}">${product.badge}</div>` : '';
+                
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    ${badgeHTML}
+                    <div class="product-image" style="cursor: pointer;">
+                        <i class="${product.icon}"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name" style="cursor: pointer;">${product.name}</h3>
+                        <div class="product-rating">
+                            <span class="stars">${stars}</span>
+                            <span class="rating-value">(${product.rating})</span>
+                        </div>
+                        <p class="product-price">₱${product.price.toLocaleString()}${oldPriceHTML}</p>
+                        <button class="btn btn-add-cart">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                `;
+
+                // Click product to view details
+                card.querySelector('.product-image').addEventListener('click', () => showProductDetails(product));
+                card.querySelector('.product-name').addEventListener('click', () => showProductDetails(product));
+
+                // Add to cart
+                card.querySelector('.btn-add-cart').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    showCartConfirmation(product);
+                });
+
+                productGrid.appendChild(card);
+            });
+        }
+
+        // ============== SEARCH FUNCTIONALITY ==============
+        searchBar.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const filtered = products.filter(p => p.name.toLowerCase().includes(query));
+            renderProducts(filtered);
+        });
+
+        // ============== CART CONFIRMATION DIALOG ==============
+        function showCartConfirmation(product) {
+            const confirmDiv = document.createElement('div');
+            confirmDiv.className = 'confirmation-modal';
+            confirmDiv.innerHTML = `
+                <div class="confirmation-content">
+                    <h3>What would you like to do?</h3>
+                    <p><strong>${product.name}</strong></p>
+                    <p class="price">₱${product.price.toLocaleString()}</p>
+                    <div class="confirmation-buttons">
+                        <button class="btn-wish" id="wishBtn">
+                            <i class="fas fa-heart"></i> Add to Wishlist
+                        </button>
+                        <button class="btn-buy" id="buyBtn">
+                            <i class="fas fa-shopping-bag"></i> Buy Now
+                        </button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(confirmDiv);
+
+            confirmDiv.querySelector('#wishBtn').addEventListener('click', () => {
+                addToWishlist(product);
+                confirmDiv.remove();
+            });
+
+            confirmDiv.querySelector('#buyBtn').addEventListener('click', () => {
+                buyNow(product);
+                confirmDiv.remove();
+            });
+
+            setTimeout(() => {
+                confirmDiv.addEventListener('click', (e) => {
+                    if (e.target === confirmDiv) {
+                        confirmDiv.remove();
+                    }
+                });
+            }, 0);
+        }
+
+        // ============== ADD TO WISHLIST ==============
+        function addToWishlist(product) {
+            const existingItem = wishlist.find(item => item.id === product.id);
+            
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                wishlist.push({
+                    ...product,
+                    quantity: 1,
+                    addedTime: new Date().toLocaleString(),
+                    cartId: Date.now()
+                });
+            }
+
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            updateCartCount();
+            showNotification(`${product.name} added to wishlist!`, 'info');
+        }
+
+        // ============== BUY NOW ==============
+        function buyNow(product) {
+            const purchaseTime = new Date();
+            const deliveryTime = new Date(purchaseTime.getTime() + 3 * 24 * 60 * 60 * 1000);
+
+            const order = {
+                ...product,
+                quantity: 1,
+                purchaseTime: purchaseTime.toLocaleString(),
+                deliveryTime: deliveryTime.toLocaleString(),
+                orderId: Date.now(),
+                status: 'Confirmed'
+            };
+
+            orders.push(order);
+            localStorage.setItem('orders', JSON.stringify(orders));
+            updateCartCount();
+            showNotification(`${product.name} purchased! Order #${order.orderId}`, 'success');
+        }
+
+        // ============== NOTIFICATIONS ==============
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i> ${message}`;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // ============== UPDATE CART DISPLAY ==============
+        function updateCartDisplay() {
+            const container = document.getElementById('cartItemsContainer');
+            const totalDiv = document.getElementById('cartTotal');
+
+            let html = '<div class="cart-tabs">';
+            html += `<button class="tab-btn active" id="wishlistTab">Wishlist (${wishlist.length})</button>`;
+            html += `<button class="tab-btn" id="ordersTab">Orders (${orders.length})</button>`;
+            html += '</div>';
+
+            // Wishlist section
+            html += '<div class="tab-content active" id="wishlistContent">';
+            if (wishlist.length === 0) {
+                html += '<p class="empty-cart">Your wishlist is empty!</p>';
+            } else {
+                html += '<div class="cart-items-list">';
+                let total = 0;
+                wishlist.forEach(item => {
+                    total += item.price * item.quantity;
+                    html += `
+                        <div class="cart-item">
+                            <div class="cart-item-header">
+                                <h4>${item.name}</h4>
+                                <button class="remove-item-btn" data-id="${item.cartId}" data-type="wishlist">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                            <p class="item-detail"><strong>Price:</strong> ₱${item.price.toLocaleString()}</p>
+                            <p class="item-detail"><strong>Quantity:</strong> ${item.quantity}</p>
+                            <p class="item-detail"><strong>Added:</strong> ${item.addedTime}</p>
+                            <button class="buy-from-wish" data-id="${item.id}">
+                                <i class="fas fa-shopping-bag"></i> Buy Now
+                            </button>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+            }
+            html += '</div>';
+
+            // Orders section
+            html += '<div class="tab-content" id="ordersContent">';
+            if (orders.length === 0) {
+                html += '<p class="empty-cart">No orders yet!</p>';
+            } else {
+                html += '<div class="cart-items-list">';
+                let total = 0;
+                orders.forEach(item => {
+                    total += item.price * item.quantity;
+                    html += `
+                        <div class="cart-item">
+                            <div class="cart-item-header">
+                                <h4>${item.name}</h4>
+                                <span class="order-status">${item.status}</span>
+                            </div>
+                            <p class="item-detail"><strong>Order ID:</strong> #${item.orderId}</p>
+                            <p class="item-detail"><strong>Price:</strong> ₱${item.price.toLocaleString()}</p>
+                            <p class="item-detail"><strong>Ordered:</strong> ${item.purchaseTime}</p>
+                            <p class="item-detail delivery-time"><strong>Delivery:</strong> ${item.deliveryTime}</p>
+                            <button class="cancel-order-btn" data-id="${item.orderId}">
+                                <i class="fas fa-ban"></i> Cancel Order
+                            </button>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+            }
+            html += '</div>';
+
+            container.innerHTML = html;
+
+            // Tab functionality
+            document.getElementById('wishlistTab').addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                document.getElementById('wishlistTab').classList.add('active');
+                document.getElementById('wishlistContent').classList.add('active');
+            });
+
+            document.getElementById('ordersTab').addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                document.getElementById('ordersTab').classList.add('active');
+                document.getElementById('ordersContent').classList.add('active');
+            });
+
+            // Remove from wishlist
+            document.querySelectorAll('.remove-item-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const id = parseInt(e.currentTarget.dataset.id);
+                    wishlist = wishlist.filter(item => item.cartId !== id);
+                    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+                    updateCartCount();
+                    updateCartDisplay();
+                });
+            });
+
+            // Buy from wishlist
+            document.querySelectorAll('.buy-from-wish').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const productId = parseInt(e.currentTarget.dataset.id);
+                    const product = products.find(p => p.id === productId);
+                    const itemInWish = wishlist.find(p => p.id === productId);
+                    wishlist = wishlist.filter(item => item.id !== productId);
+                    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+                    buyNow(product);
+                    updateCartDisplay();
+                });
+            });
+
+            // Cancel order
+            document.querySelectorAll('.cancel-order-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const id = parseInt(e.currentTarget.dataset.id);
+                    const item = orders.find(item => item.orderId === id);
+                    if (confirm(`Cancel order #${id} for ${item.name}?`)) {
+                        orders = orders.filter(item => item.orderId !== id);
+                        localStorage.setItem('orders', JSON.stringify(orders));
+                        updateCartCount();
+                        updateCartDisplay();
+                        showNotification('Order cancelled successfully!', 'info');
+                    }
+                });
+            });
+        }
+
+        // ============== UPDATE CART COUNT ==============
+        function updateCartCount() {
+            const count = wishlist.length + orders.length;
+            cartCount.textContent = count;
+        }
+
+        // ============== SHOW PRODUCT DETAILS ==============
+        function showProductDetails(product) {
+            const detailsDiv = document.getElementById('productDetails');
+            const stars = '★'.repeat(Math.floor(product.rating)) + (product.rating % 1 ? '½' : '');
+            
+            let commentsHTML = '<div class="comments-section"><h4>Customer Reviews:</h4>';
+            product.comments.forEach(comment => {
+                commentsHTML += `<div class="comment"><p>✓ ${comment}</p></div>`;
+            });
+            commentsHTML += '</div>';
+
+            detailsDiv.innerHTML = `
+                <button class="modal-close" id="productCloseBtn">&times;</button>
+                <div class="product-details-container">
+                    <div class="details-image">
+                        <i class="${product.icon}"></i>
+                    </div>
+                    <div class="details-content">
+                        <h2>${product.name}</h2>
+                        <div class="details-rating">
+                            <span class="stars">${stars}</span>
+                            <span class="rating-value">(${product.rating}) - ${product.reviews} reviews</span>
+                        </div>
+                        <p class="details-price">₱${product.price.toLocaleString()}</p>
+                        <button class="btn btn-primary" id="detailsAddCart">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                        ${commentsHTML}
+                        <div class="add-comment-section">
+                            <h4>Share Your Experience:</h4>
+                            <div style="display: flex; gap: 0.5rem; flex-direction: column;">
+                                <textarea class="comment-input" placeholder="Write your comment here..." rows="3"></textarea>
+                                <button class="btn btn-primary post-comment-btn">Post Comment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('detailsAddCart').addEventListener('click', () => {
+                showCartConfirmation(product);
+            });
+
+            document.getElementById('productCloseBtn').addEventListener('click', () => {
+                productModal.style.display = 'none';
+            });
+
+            document.querySelector('.post-comment-btn').addEventListener('click', () => {
+                const textarea = document.querySelector('.comment-input');
+                const commentText = textarea.value.trim();
+                
+                if (commentText.length > 0) {
+                    product.comments.push(commentText);
+                    textarea.value = '';
+                    showProductDetails(product);
+                    showNotification('Thank you for your comment!', 'success');
+                } else {
+                    showNotification('Please write a comment!', 'info');
+                }
+            });
+
+            productModal.style.display = 'flex';
+        }
+
+        // ============== MODAL CONTROLS ==============
+        cartBtn.addEventListener('click', () => {
+            updateCartDisplay();
+            cartModal.style.display = 'flex';
+        });
+
+        aboutBtn.addEventListener('click', () => {
+            aboutModal.style.display = 'flex';
+        });
+
+        cartClose.addEventListener('click', () => {
+            cartModal.style.display = 'none';
+        });
+
+        aboutClose.addEventListener('click', () => {
+            aboutModal.style.display = 'none';
+        });
+
+        productClose.addEventListener('click', () => {
+            productModal.style.display = 'none';
+        });
+
+        // Close modal on background click
+        [cartModal, aboutModal, productModal].forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+        // ============== HERO BUTTONS ==============
+        document.querySelectorAll('.hero-buttons .btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // ============== BACK TO TOP ==============
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ============== THEME TOGGLE ==============
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        body.setAttribute('data-theme', currentTheme);
+
+        if (currentTheme === 'dark') {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            let theme = body.getAttribute('data-theme');
+            if (theme === 'light') {
+                body.setAttribute('data-theme', 'dark');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.setAttribute('data-theme', 'light');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // ============== ACTIVE NAVIGATION ==============
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // ============== INITIALIZATION ==============
+        renderProducts();
+        updateCartCount();
+    </script>
+</body>
+</html>
